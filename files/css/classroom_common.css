@@ -198,6 +198,90 @@ main strong {
   margin-left: 1rem;
 }
 
+/* Enrollment form styles */
+.enrollment-form-submit {
+  background-color: #a51417;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.enrollment-form-submit:hover {
+  background-color: #8b1013;
+}
+
+.day-to-attend {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #444;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type="text"] {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+  max-width: 100%;
+  margin-left: 10px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #a51417;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  margin-left: 0;
+}
+
+/* Download links styles */
+.download {
+  color: #a51417;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.download:hover {
+  color: #8b1013;
+  text-decoration: underline;
+}
+
+/* News section styling */
+.announcements p a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+#bear-track-news {
+  margin-bottom: 2rem;
+}
+
+#enrollment {
+  margin-bottom: 2rem;
+}
+
+#enrollment form {
+  margin-top: 1rem;
+}
+
+#enrollment h4 {
+  margin-bottom: 1rem;
+  color: #444;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 @media (max-width: 768px) {
   .parallel-panels-container {
     flex-direction: column;
@@ -207,5 +291,11 @@ main strong {
   .schedule-panel,
   .goals-panel {
     margin: 0;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
