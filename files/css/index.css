@@ -39,6 +39,7 @@
 
 #column-view {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .column {
@@ -102,6 +103,20 @@ article h2 {
 .column article {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+#left-column {
+  order: 1;
+  height: fit fit-content;
+}
+
+#middle-column {
+  order: 3;
+  margin-top: -17rem;
+}
+
+#right-column {
+  order: 2;
 }
 
 main hr {
