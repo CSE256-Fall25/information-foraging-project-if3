@@ -1,26 +1,194 @@
 @import url("common.css");
 @import url("side_menu.css");
+
 main ul {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 main li {
-    font-size: 1.15em;
-    margin-bottom: 1em;
+  font-size: 1.15em;
+  margin-bottom: 1em;
 }
 
 .classroom {
-    margin-top: 6em;
-    margin-bottom: 1em;
-    clear: both;
-    overflow: hidden;
+  margin-top: 6em;
+  margin-bottom: 1em;
+  clear: both;
+  overflow: hidden;
 }
 
 .classroom img {
-    float: left;
-    margin-right: 2.5em;
+  float: left;
+  margin-right: 2.5em;
 }
 
 .classroom p {
-    font-size: 1.15em;
+  font-size: 1.15em;
+}
+
+.classroom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  max-width: 1200px;
+}
+
+.classroom-panel {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.classroom-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #999;
+  text-decoration: none;
+}
+
+.classroom-panel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.panel-content {
+  padding: 1.5rem;
+}
+
+.panel-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: -1.5rem -1.5rem 0.5rem -1.5rem;
+  padding: 0.5rem 1.5rem;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  background-color: #a51417;
+}
+
+.age-group {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.key-feature {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.learn-more {
+  color: #0066cc;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.learn-more:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.enrichment-panel {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 0;
+  max-width: none;
+  border-radius: 0;
+}
+
+.enrichment-panel img {
+  height: 200px;
+  grid-column: 1;
+}
+
+.enrichment-panel .panel-content {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.enrichment-panel h3 {
+  font-size: 1.5rem;
+  margin: -2rem -2rem 0.75rem -2rem;
+  padding: 0.6rem 2rem;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  background-color: #a51417;
+  color: #fff;
+}
+
+.enrichment-panel .key-feature {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.curriculum-link-container {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+.curriculum-overview-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a51417;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  border: 2px solid #a51417;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.curriculum-overview-link:hover {
+  background-color: #a51417;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .classroom-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .classroom-panel {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .enrichment-panel {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+  }
+
+  .enrichment-panel img {
+    grid-column: 1;
+  }
+
+  .enrichment-panel .panel-content {
+    grid-column: 1;
+  }
 }

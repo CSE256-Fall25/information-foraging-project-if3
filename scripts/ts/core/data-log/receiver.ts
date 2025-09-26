@@ -7,8 +7,7 @@ export class EventReceiver {
 
   public register(eventType: string, callback?: (event: TrackerEvent) => void) {
     this.emitter.addEventListener(eventType, (event: Event) => {
-      const trackEv = ((event as unknown) as CustomEvent)
-        .detail as TrackerEvent;
+      const trackEv = (event as unknown as CustomEvent).detail as TrackerEvent;
       if (isTrackerEvent(trackEv) && callback) {
         callback(trackEv);
       }
