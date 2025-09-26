@@ -42,19 +42,30 @@ header {
   text-decoration: none;
 }
 
-.site-title#apply {
+.action-buttons {
+  display: flex;
+  gap: 1em; /* spacing between buttons */
+}
+
+/* button links */
+.action-button {
   color: #ffffff;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  justify-content: right;
   font-size: 1em;
-  padding: 0.5em 1em; /* Add top/bottom padding for a button feel */
+  padding: 0.5em 1em;
   border: 1px solid #a51417;
   border-radius: 6px;
   background-color: #a51417;
   cursor: pointer;
-  text-decoration: none; /* Remove underline from <a> */
-  display: inline-block; /* Allows padding/margin to behave like a button */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.action-button:hover {
+  color: #ffffff;
+  border: 1px solid #bf2d30;
+  background-color: #bf2d30;
+  text-decoration: underline;
 }
 
 .site-title:hover {
