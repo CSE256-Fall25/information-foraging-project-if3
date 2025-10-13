@@ -1,3 +1,242 @@
 @import url("common.css");
-@import url("accordian.css");
 @import url("side_menu.css");
+
+main ul {
+  margin-top: 1em;
+}
+
+main li {
+  font-size: 1.15em;
+  margin-bottom: 1em;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+  max-width: 1400px;
+}
+
+.resource-panel {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #999;
+}
+
+.resource-panel-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-panel-content h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  background-color: #a51417;
+}
+
+.resource-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.read-link {
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.read-link:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+/* Parent Handbook - Wide Panel */
+.parent-handbook-panel {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: none;
+  border-radius: 0;
+}
+
+.parent-handbook-panel .resource-panel-content {
+  padding: 2rem;
+}
+
+.parent-handbook-panel h3 {
+  font-size: 1.6rem;
+  margin: -2rem -2rem 1rem -2rem;
+  padding: 0.75rem 2rem;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  background-color: #a51417;
+  color: #fff;
+}
+
+.parent-handbook-panel .resource-description {
+  font-size: 1.05rem;
+  column-count: 2;
+  column-gap: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Accordion styles for dropdown content */
+.accordion {
+  background-color: #a51417;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0.5rem;
+}
+
+.accordion:hover {
+  background-color: #8a1113;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+.panel {
+  display: none;
+  overflow: hidden;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.panel p,
+.panel h4,
+.panel h5,
+.panel hr {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.panel h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.panel h5 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.panel hr {
+  margin: 0.5rem 1.5rem 1rem 1.5rem;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.panel p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.panel p:last-child {
+  padding-bottom: 1.5rem;
+}
+
+.panel a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.panel a:hover {
+  text-decoration: underline;
+  color: #004499;
+}
+
+.download {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #a51417;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.download:hover {
+  background-color: #8a1113;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .parent-handbook-panel .resource-description {
+    column-count: 1;
+  }
+
+  .resource-panel {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .parent-handbook-panel {
+    grid-column: 1;
+  }
+}

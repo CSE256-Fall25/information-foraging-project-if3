@@ -29,67 +29,176 @@
         </h2>
         <br />
 
-        <button class="accordion">Articles</button>
+        <div class="resource-grid">
+          <!-- Parent Handbook - Wide Panel -->
+          <div class="resource-panel parent-handbook-panel">
+            <div class="resource-panel-content">
+              <h3>Parent Handbook</h3>
+              <div class="resource-description">
+                <p>
+                  <strong>Vision:</strong> Washington University Nursery School
+                  (WUNS) values children for their curiosity, creativity, and
+                  love of play; families for their commitments and aspirations;
+                  and teachers for their skill, compassion, and dedication. The
+                  school fosters a collaborative community where everyone learns
+                  from one another.
+                </p>
+                <p>
+                  <strong>Parent–School Partnership:</strong> WUNS and families
+                  form a supportive team based on honesty, trust, civility, and
+                  mutual respect. Open, timely, and constructive communication
+                  is essential.
+                </p>
+                <p>
+                  <strong>Staff:</strong> WUNS teachers generally hold degrees
+                  in early childhood or elementary education and bring extensive
+                  experience to the classroom. The school supports ongoing
+                  professional development, monthly staff meetings, and
+                  CPR/First Aid certification.
+                </p>
+                <p>
+                  <strong>Curriculum:</strong> WUNS follows a child-centered,
+                  play-based curriculum rooted in constructivist theories.
+                  Children learn through exploration, sensory experiences,
+                  collaborative play, and teacher-guided activities.
+                </p>
+              </div>
+              <a
+                class="read-link"
+                href="#handbook-accordion"
+                data-accordion="handbook-accordion"
+                >Read More →</a
+              >
+            </div>
+          </div>
+
+          <!-- Articles Panel -->
+          <div class="resource-panel">
+            <div class="resource-panel-content">
+              <h3>Articles</h3>
+              <div class="resource-description">
+                Explore insightful articles on early childhood development,
+                behavior strategies, and educational approaches. Topics include
+                supporting learning during holidays, understanding challenging
+                behaviors, the importance of play, and tips for starting
+                preschool.
+              </div>
+              <a
+                class="read-link"
+                href="#articles-accordion"
+                data-accordion="articles-accordion"
+                >Read →</a
+              >
+            </div>
+          </div>
+
+          <!-- Books Panel -->
+          <div class="resource-panel">
+            <div class="resource-panel-content">
+              <h3>Books</h3>
+              <div class="resource-description">
+                Recommended books from professional development workshops
+                attended by WUNS staff, including "Emotional Muscle: Strong
+                Parents, Strong Children" and "No Drama Discipline" – practical
+                guides for understanding and supporting your child's emotional
+                development.
+              </div>
+              <a
+                class="read-link"
+                href="#books-accordion"
+                data-accordion="books-accordion"
+                >Read →</a
+              >
+            </div>
+          </div>
+
+          <!-- Websites Panel -->
+          <div class="resource-panel">
+            <div class="resource-panel-content">
+              <h3>Websites</h3>
+              <div class="resource-description">
+                Helpful online resources for parents including Mama Space, an
+                online parenting resource, and The Genius of Play, which
+                celebrates the importance of play in child development.
+              </div>
+              <a
+                class="read-link"
+                href="#websites-accordion"
+                data-accordion="websites-accordion"
+                >Read →</a
+              >
+            </div>
+          </div>
+
+          <!-- Parent Association Panel -->
+          <div class="resource-panel">
+            <div class="resource-panel-content">
+              <h3>Parent Association</h3>
+              <div class="resource-description">
+                The parent organization helps families become better acquainted,
+                builds community, and raises funds for extras. All parents are
+                automatically members. Join meetings, connect with room parents,
+                and participate in family events listed on the school calendar.
+              </div>
+              <a
+                class="read-link"
+                href="#association-accordion"
+                data-accordion="association-accordion"
+                >Read →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <button class="accordion" id="articles-accordion">Articles</button>
         <div class="panel">
-          <br />
-          <h4>Missouri Early Learning Standards:</h4>
-          <br />
-          <hr />
-          <br />
           <p>
             <a
               href="https://www.naeyc.org/our-work/families/support-learning-during-holidays"
-              target="_blank"
-              >Supporting Your Child’s Learning During the Holidays</a
+              >Supporting Your Child's Learning During the Holidays</a
             >
             <br /><br />
             <a
               href="http://reason.com/archives/2017/10/26/the-fragile-generation"
-              target="_blank"
               >The Fragile Generation</a
             >
             <br /><br />
             <a
               href="http://families.naeyc.org/learning-and-development/child-development/dressing-halloween-different-pretend-play"
-              target="_blank"
               >Is Dressing Up for Halloween Different than for Pretend Play?</a
             >
             <br /><br />
             <a
               href="https://www.zerotothree.org/resources/326-toddlers-and-challenging-behavior-why-they-do-it-and-how-to-respond"
-              target="_blank"
               >Toddlers and Challenging Behaviors: Why They Do It and How to
               Respond</a
             >
             <br /><br />
             <a
               href="https://www.zerotothree.org/parenting/discipline-and-limit-setting"
-              target="_blank"
               >Discipline and Limit Setting</a
             >
             <br /><br />
             <a
               href="http://www.davidsongifted.org/Search-Database/entry/A10242"
-              target="_blank"
               >The Art of Avoiding Power Struggles With Your Child</a
             >
             <br /><br />
             <a
               href="https://families.naeyc.org/learning-and-development/child-development/10-things-every-parent-should-know-about-play"
-              target="_blank"
               >Ten Things Every Parent Should Know About Play</a
             >
             <br /><br />
             <a
               href="https://families.naeyc.org/learning-and-development/music-math-more/13-tips-starting-preschool"
-              target="_blank"
               >Thirteen Tips For Starting Preschool</a
             >
             <br /><br />
           </p>
         </div>
-
-        <button class="accordion">Books</button>
+        <button class="accordion" id="books-accordion">Books</button>
         <div class="panel">
           <p>
             The WUNS staff and teachers attend yearly professional development
@@ -106,7 +215,7 @@
           </p>
         </div>
 
-        <button class="accordion">Websites</button>
+        <button class="accordion" id="websites-accordion">Websites</button>
         <div class="panel">
           <p>
             Online parenting resource:
@@ -118,7 +227,9 @@
           </p>
         </div>
 
-        <button class="accordion">Parent Association</button>
+        <button class="accordion" id="association-accordion">
+          Parent Association
+        </button>
         <div class="panel">
           <br />
           <h4>Parent Association Information:</h4>
@@ -150,7 +261,9 @@
           </p>
         </div>
 
-        <button class="accordion">Parent Handbook</button>
+        <button class="accordion" id="handbook-accordion">
+          Parent Handbook
+        </button>
         <div class="panel">
           <br />
           <h4>Parent Handbook Information:</h4>
@@ -172,7 +285,7 @@
             WUNS and families form a supportive team based on honesty, trust,
             civility, and mutual respect. Open, timely, and constructive
             communication is essential. By enrolling, families agree to support
-            the school’s philosophy and policies and to work with teachers and
+            the school's philosophy and policies and to work with teachers and
             staff in the best interest of each child. If a constructive
             partnership cannot be maintained, the school reserves the right to
             deny continued attendance or re-enrollment.
@@ -192,7 +305,7 @@
             constructivist theories. Children learn through exploration, sensory
             experiences, collaborative play, and teacher-guided activities in
             centers such as art, literacy, science, and dramatic play.
-            Activities are designed to respect each child’s pace and background.
+            Activities are designed to respect each child's pace and background.
           </p>
 
           <h5>Bear Tracks Program</h5>
@@ -207,7 +320,7 @@
           <p>
             Orientation helps families transition into the school year.
             Communication occurs through newsletters, the website, emails, and
-            teacher contact. Teachers observe and document children’s
+            teacher contact. Teachers observe and document children's
             development; there are two formal parent–teacher conferences each
             year (fall and spring), and conferences may be scheduled any time as
             needed.
@@ -267,5 +380,58 @@
     </div>
     <ts-load data-name="footer"></ts-load>
     <script src="scripts/js/app.js"></script>
+
+    <script>
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set up accordions
+        var accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(function (acc) {
+          acc.addEventListener("click", function () {
+            var panel = this.nextElementSibling;
+            if (!panel) return;
+
+            // Toggle active state
+            this.classList.toggle("active");
+
+            // Toggle panel display
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        });
+
+        // Set up read links to scroll to accordions
+        var readLinks = document.querySelectorAll(".read-link[data-accordion]");
+        readLinks.forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var accordionId = this.getAttribute("data-accordion");
+            var accordion = document.getElementById(accordionId);
+
+            if (!accordion) return;
+
+            // Open accordion if not already open
+            if (!accordion.classList.contains("active")) {
+              accordion.click();
+            }
+
+            // Scroll to accordion with offset
+            setTimeout(function () {
+              var yOffset = -100;
+              var elementPosition = accordion.getBoundingClientRect().top;
+              var offsetPosition = elementPosition + window.pageYOffset + yOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }, 300);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
