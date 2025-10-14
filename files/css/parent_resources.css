@@ -147,21 +147,33 @@ main li {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-top: none;
+  padding: 1.5rem;
+}
+
+.panel > *:first-child {
+  margin-top: 0;
+}
+
+.panel > *:last-child {
+  margin-bottom: 0;
 }
 
 .panel p,
 .panel h4,
 .panel h5,
-.panel hr {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.panel a:not(.download) {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .panel h4 {
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   color: #333;
+  padding-bottom: 0;
 }
 
 .panel h5 {
@@ -172,7 +184,8 @@ main li {
 }
 
 .panel hr {
-  margin: 0.5rem 1.5rem 1rem 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
   border: none;
   border-top: 1px solid #ddd;
 }
@@ -180,10 +193,6 @@ main li {
 .panel p {
   margin-bottom: 0.75rem;
   line-height: 1.6;
-}
-
-.panel p:last-child {
-  padding-bottom: 1.5rem;
 }
 
 .panel a {
@@ -204,7 +213,7 @@ main li {
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  margin: 1rem 0;
+  margin: 1.5rem 0 0 0;
 }
 
 .download:hover {
