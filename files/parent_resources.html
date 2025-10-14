@@ -75,7 +75,7 @@
           <!-- Articles Panel -->
           <div class="resource-panel">
             <div class="resource-panel-content">
-              <h3>Articles</h3>
+              <h3>Articles</h3>          
               <div class="resource-description">
                 Explore insightful articles on early childhood development,
                 behavior strategies, and educational approaches. Topics include
@@ -155,6 +155,11 @@
         <button class="accordion" id="articles-accordion">Articles</button>
         <div class="panel">
           <p>
+            <br />
+            <h4>Parent Handbook Information:</h4>
+            <br />
+            <hr />
+            <br />  
             <a
               href="https://www.naeyc.org/our-work/families/support-learning-during-holidays"
               >Supporting Your Child's Learning During the Holidays</a
@@ -380,58 +385,5 @@
     </div>
     <ts-load data-name="footer"></ts-load>
     <script src="scripts/js/app.js"></script>
-
-    <script>
-      // Wait for DOM to be fully loaded
-      document.addEventListener("DOMContentLoaded", function () {
-        // Set up accordions
-        var accordions = document.querySelectorAll(".accordion");
-        accordions.forEach(function (acc) {
-          acc.addEventListener("click", function () {
-            var panel = this.nextElementSibling;
-            if (!panel) return;
-
-            // Toggle active state
-            this.classList.toggle("active");
-
-            // Toggle panel display
-            if (panel.style.display === "block") {
-              panel.style.display = "none";
-            } else {
-              panel.style.display = "block";
-            }
-          });
-        });
-
-        // Set up read links to scroll to accordions
-        var readLinks = document.querySelectorAll(".read-link[data-accordion]");
-        readLinks.forEach(function (link) {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            var accordionId = this.getAttribute("data-accordion");
-            var accordion = document.getElementById(accordionId);
-
-            if (!accordion) return;
-
-            // Open accordion if not already open
-            if (!accordion.classList.contains("active")) {
-              accordion.click();
-            }
-
-            // Scroll to accordion with offset
-            setTimeout(function () {
-              var yOffset = -100;
-              var elementPosition = accordion.getBoundingClientRect().top;
-              var offsetPosition = elementPosition + window.pageYOffset + yOffset;
-
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }, 300);
-          });
-        });
-      });
-    </script>
   </body>
 </html>
