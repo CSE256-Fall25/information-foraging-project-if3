@@ -1,42 +1,156 @@
 @import url("common.css");
+@import url("side_menu.css");
+
 .image-container {
   background-size: 100% 900px;
   background-image: url("https://nurseryschool.wustl.edu/files/2017/09/170914_jjn_nursery_school_008.jpg");
 }
 
-.calendar-session {
-  border: 1px solid #eee;
-  margin-top: 1em;
-  margin-bottom: 1em;
+.legend {
+  font-style: italic;
+  color: #666;
+  margin: 1.5em 0;
+  padding: 0.75em 1em;
+  background-color: #f8f8f8;
+  border-left: 4px solid #a51417;
 }
 
-.calendar-session header {
-  color: rgb(85, 85, 85);
-  background-color: #eee;
-  font-size: 24px;
+.calendar-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+  max-width: 1400px;
+}
+
+.calendar-month-section {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.calendar-month-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #999;
+}
+
+.month-header {
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 30px;
-  margin-block-end: 12px;
-  margin-block-start: 0px;
-  padding: 20px 20px 20px 20px;
+  color: #fff;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  background-color: #a51417;
 }
 
-.calendar-entry h3 {
-  color: rgb(85, 85, 85);
-  font-size: 17px;
+.calendar-events {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.calendar-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.calendar-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-color: #999;
+}
+
+.calendar-card .date {
   font-weight: 600;
-  line-height: 20px;
-  margin-block-end: 12px;
-  margin-block-start: 0px;
-  padding: 10px 10px 0px 20px;
+  font-size: 0.95rem;
+  color: #a51417;
+  margin-bottom: 0.5rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.calendar-entry p {
-  color: rgb(85, 85, 85);
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 17px;
-  margin-block-end: 12px;
-  margin-block-start: 0px;
-  padding: 0px 0px 10px 20px;
+.calendar-card .event {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.calendar-card.no-school {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.calendar-card.no-school .date {
+  color: #856404;
+}
+
+.calendar-card.no-school .event {
+  color: #856404;
+  font-weight: 500;
+}
+
+.calendar-card.highlight {
+  background: #ffe5e5;
+  border-color: #a51417;
+  border-width: 2px;
+}
+
+.calendar-card.highlight .date {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.calendar-card.highlight .event {
+  font-weight: 600;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.calendar-month-section {
+  scroll-margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .calendar-events {
+    grid-template-columns: 1fr;
+  }
+
+  .month-header {
+    font-size: 1.3rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .calendar-card {
+    padding: 0.9rem;
+  }
+
+  .calendar-grid {
+    gap: 1.5rem;
+  }
+
+  main {
+    width: 100%;
+    float: none;
+    margin: 20px;
+  }
+
+  .secondary {
+    width: 100%;
+    float: none;
+    padding: 1em;
+    position: relative;
+  }
 }
