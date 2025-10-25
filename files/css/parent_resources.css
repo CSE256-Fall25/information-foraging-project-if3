@@ -78,6 +78,18 @@ main li {
   text-decoration: underline;
 }
 
+/* for read-limk */
+.alt {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #a51417;
+    display: inline;
+}
+.alt:hover {
+    color: #850000;
+    text-decoration: underline;
+}
+
 /* Parent Handbook - Wide Panel */
 .parent-handbook-panel {
   grid-column: 1 / -1;
